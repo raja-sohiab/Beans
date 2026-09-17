@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["run_id", "kb_commit", "input_sha256", "output_sha256", "input_row_count", "output_row_count", "leads", "batch_qa", "final_release_decision"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "kb_commit": {"type": "string", "minLength": 7},
+    "input_sha256": {"type": "string"},
+    "output_sha256": {"type": "string"},
+    "input_row_count": {"type": "integer", "minimum": 0},
+    "output_row_count": {"type": "integer", "minimum": 0},
+    "leads": {"type": "array"},
+    "batch_qa": {"type": "object"},
+    "final_release_decision": {"enum": ["RELEASED", "NOT_RELEASED"]}
+  }
+}

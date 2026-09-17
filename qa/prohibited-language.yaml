@@ -1,0 +1,13 @@
+prohibited:
+  - em_dash
+  - guaranteed_leads
+  - guaranteed_meetings
+  - guaranteed_customers
+  - guaranteed_revenue
+  - fake_personalization
+  - unsupported_specificity
+  - calendar_link
+  - aggressive_cta
+  - generic_fallback
+  - template_copy
+

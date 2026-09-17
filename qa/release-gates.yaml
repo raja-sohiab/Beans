@@ -1,0 +1,15 @@
+gates:
+  - knowledge_bundle_verified
+  - input_partition_complete
+  - original_fields_preserved
+  - subject_2_to_4_words
+  - email_1_body_15_to_29_words
+  - email_2_exact_email_1_handoff
+  - email_3_exact_prior_handoff
+  - email_2_and_3_have_no_ps
+  - evidence_grounding_passed
+  - prohibited_language_absent
+  - deterministic_behavior_check_passed
+  - manifest_matches_artifacts
+  - independent_final_csv_qa_passed
+

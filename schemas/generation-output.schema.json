@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["agent", "project", "lead_id", "subject", "email_1", "email_2", "email_3", "generation_metadata"],
+  "properties": {
+    "agent": {"const": "beans"},
+    "project": {"const": "persistiq"},
+    "lead_id": {"type": "string"},
+    "subject": {"type": "string", "minLength": 1},
+    "email_1": {"type": "object", "required": ["greeting", "body", "signature", "ps"]},
+    "email_2": {"type": "object", "required": ["greeting", "body", "signature"]},
+    "email_3": {"type": "object", "required": ["greeting", "body", "signature"]},
+    "generation_metadata": {"type": "object", "required": ["model", "invocation_id"]}
+  }
+}

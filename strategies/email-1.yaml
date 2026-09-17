@@ -1,0 +1,14 @@
+strategies:
+  - id: direct_offer
+    purpose: Directly connect a supported customer need to finding and handing off interested respondents.
+    required_evidence: [service_or_benefit, beneficiary_or_broad_beneficiary]
+  - id: referral_hypothesis
+    purpose: Carefully hypothesize an acquisition pattern and offer additional outbound reach.
+    required_evidence: [acquisition_or_referral_evidence, service_or_benefit]
+  - id: pain_problem
+    purpose: Frame a supported category-level customer situation before the outreach offer.
+    required_evidence: [service_or_benefit, supported_customer_situation]
+  - id: qualification_uncertainty
+    purpose: Use conservative wording and invite correction when the commercial interpretation is broad or uncertain.
+    required_evidence: [service_or_benefit_or_benefit_language]
+

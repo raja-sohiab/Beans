@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["agent", "project", "lead", "processable", "research_status", "homepage", "services_research", "business_understanding", "limitations"],
+  "properties": {
+    "agent": {"const": "beans"},
+    "project": {"const": "persistiq"},
+    "processable": {"type": "boolean"},
+    "research_status": {"enum": ["complete", "partial", "failed"]},
+    "lead": {"type": "object"},
+    "homepage": {"$ref": "#/$defs/page"},
+    "services_research": {"type": "object"},
+    "business_understanding": {"type": "object"},
+    "limitations": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "page": {
+      "type": "object",
+      "required": ["status", "evidence"],
+      "properties": {
+        "url": {"type": ["string", "null"]},
+        "status": {"type": "string"},
+        "title": {"type": ["string", "null"]},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/evidence"}}
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["evidence_id", "source_url", "source_quote", "claim", "evidence_type", "confidence"],
+      "properties": {
+        "evidence_id": {"type": "string"},
+        "source_url": {"type": "string"},
+        "source_quote": {"type": "string", "minLength": 1},
+        "claim": {"type": "string", "minLength": 1},
+        "evidence_type": {"type": "string"},
+        "confidence": {"enum": ["high", "medium", "low"]}
+      }
+    }
+  }
+}
